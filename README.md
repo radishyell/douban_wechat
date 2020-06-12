@@ -1,2 +1,2 @@
-# douban_wechat
-模仿豆瓣
+# wechat_miniprogram
+小程序骨架

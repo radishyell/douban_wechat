@@ -1,0 +1,27 @@
+# 忽略bin文件
+bin
+
+#忽略包文件
+packages
+
+
+dist
+node_modules
+
+*/.DS_Store
+.vscode/
+
+logs/
+npm-debug.log
+yarn-error.log
+node_modules/
+package-lock.json
+yarn.lock
+coverage/
+.idea/
+run/
+.DS_Store
+*.sw*
+*.un~
+typings/
+.nyc_output/
