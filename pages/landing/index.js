@@ -8,9 +8,17 @@ create(store, {
 	data: {
 	},
 	onLoad() {
-		wx.switchTab({
-			url: '/pages/home/index/index'
-		})
+		this.fetchUserInfo(2000);
+	},
+	fetchUserInfo(timeout = 0) {
+		setTimeout(() => {
+			this.selectComponent('#oauth').isHaveUserInfo((res)=>{
+				console.log(res);
+				wx.switchTab({
+					url: '/pages/home/index/index'
+				})
+			})
+		}, timeout);
 	}
 });
 

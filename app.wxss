@@ -9,5 +9,6 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  background: #232227;
 } 
 

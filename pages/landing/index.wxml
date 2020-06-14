@@ -1,4 +1,16 @@
-<!--index.wxml-->
 <view class="container">
-    
+  <view class="content">
+    <image src="/image/hover.jpeg"  mode="aspectFill"/>
+    <view class="hover_bg"></view>
+    <view class="user_info">
+      <view bindtap="fetchUserInfo">立即开启</view>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="foot_content">
+      <image src="/image/logo.jpeg" />
+      <view>豆瓣</view>
+    </view>
+  </view>
 </view>
+<oauth id="oauth"/>

@@ -1,0 +1,25 @@
+<cover-view class="oauth_content" wx:if="{{isShow}}">
+    <cover-view class="content">
+        <cover-view class="logo">
+            <cover-image class="logo_image" src="/image/logo.jpeg"></cover-image>
+        </cover-view>
+        <cover-view>
+            <cover-view>
+                <cover-view class="logo_title">该程序将获取您一下权限：</cover-view>
+                <cover-view class="logo_des">
+                    <cover-view>获取您的公开信息（头像，昵称）</cover-view>
+                </cover-view>
+            </cover-view>
+            <cover-view class="btn_content">
+                <cover-view class="single_btn cancel" bindtap="cancel">拒绝</cover-view>
+                <cover-view>
+                    <cover-view>
+                        <button class="custom_btn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGetUserInfo">
+                            <cover-view class="single_btn phone">允许</cover-view>
+                        </button>
+                    </cover-view>
+                </cover-view>
+            </cover-view>
+        </cover-view>
+    </cover-view>
+</cover-view>

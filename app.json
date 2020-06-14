@@ -8,10 +8,10 @@
     "pages/me/index/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#232227",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "Radish",
-    "backgroundColor": "#ffffff",
+    "backgroundColor": "#232227",
     "backgroundTextStyle": "dark",
     "enablePullDownRefresh": false
   },
