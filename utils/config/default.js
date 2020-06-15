@@ -8,6 +8,6 @@ module.exports = {
 
   // 动态加载工具方法。名字和tools下的文件命名一致
   methods: [ 
-    'god', 'request', 'share', 'toast', 'aldstat'
+    'god', 'request', 'share', 'toast', 'aldstat', 'api'
   ]
 }
