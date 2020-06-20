@@ -1,0 +1,9 @@
+<view class="empty_content" hidden="{{!isShow}}">
+	<view>
+		<image wx:if="{{config.imagePath}}" class="empty_image" mode="widthFix" src="{{config.imagePath}}"></image>
+		<view class="default_gray_font empty_middle" wx:if="config.title">
+			<text decode="{{true}}">{{config.title}}</text>
+		</view>
+		<view class="default_bg_color default_font empty_btn" wx:if="{{config.btnText}}" bindtap="btnTap">{{config.btnText}}</view>
+	</view>
+</view>

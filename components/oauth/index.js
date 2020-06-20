@@ -12,7 +12,6 @@ create({
 			if (this.data.callBack) { 
 				this.data.callBack(this.store.data.userInfo); 
 			}
-
 			this.setData({ isShow: false, callBack: null });
 		},
 		isHaveUserInfo(callBack) {

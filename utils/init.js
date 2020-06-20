@@ -37,10 +37,7 @@ module.exports = () => {
 function fetchConfig () {
   let versionConfig = null;
   try {
-    if (!__wxConfig || !__wxConfig.envVersion) {
-      throw new Error('__wxConfig undefinde');
-    }
-    const envVersion = __wxConfig.envVersion;
+    const envVersion = wx.getAccountInfoSync().miniProgram.envVersion;
     switch (envVersion) {
       case 'develop':
         versionConfig = require('./config/develop');

@@ -1,0 +1,4 @@
+<view class="loadmore" bindtap="clickLoadMore" hidden="{{!isShow}}">
+	<image class="icon {{isShowIcon?'active':''}}" src="./loading.png" hidden="{{!isShowIcon}}" />
+	<text>{{text}}</text>
+</view>

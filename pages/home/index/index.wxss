@@ -1,0 +1,66 @@
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.home_srocll {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  margin: 0 20rpx;
+}
+
+.single_rank {
+  height: 350rpx;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.single_rank_bg {
+  width: 100%;
+  height: 100%;
+}
+.single_rank_hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.single_rank_content {
+  color: white;
+  margin-left: 45rpx;
+}
+
+.rank_title {
+  font-size: 35rpx;
+  font-weight: bold;
+  margin-bottom: 40rpx;
+}
+.rank_info {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+}
+.rank_info image {
+  height: 183rpx;
+  width: 130rpx;
+  border-radius: 10rpx;
+  margin-right: -40rpx;
+}
+.rank_count {
+  margin-left: 64rpx;
+  color: #929e9c;
+  font-size: 25rpx;
+  display: flex;
+  align-items: center;
+}

@@ -8,18 +8,17 @@
     "pages/me/index/index"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#232227",
-    "navigationBarTextStyle": "white",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Radish",
-    "backgroundColor": "#232227",
-    "backgroundTextStyle": "dark",
-    "enablePullDownRefresh": false
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "dark"
   },
   "tabBar": {
     "color": "#666666",
     "selectedColor": "#000000",
-    "borderStyle": "white",
-    "backgroundColor": "#f7f7f7",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
     "list": [
       {
         "text": "首页",

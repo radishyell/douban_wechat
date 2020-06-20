@@ -1,4 +1,40 @@
-<!--index.wxml-->
-<view class="container">
-    
-</view>
+<scroll-view scroll-y class="home_srocll" style="height: {{windowHeight}}px;">
+  <empty id="empty"/>
+  <view class="content">
+    <!-- <view class="title">
+      <van-divider
+        contentPosition="center"
+        customStyle="{{dividerStyle}}"
+        hairline
+      >年度榜单</van-divider>
+    </view> -->
+
+    <view>
+      <block wx:for="{{rank}}" wx:key="index">
+        <view class="single_rank" bindtap="rankTap" data-item="{{index}}">
+          <image class="single_rank_bg" src="{{item.top3[0].images.large}}" mode="aspectFill"/>
+          <view class="single_rank_hover" />
+          <view class="single_rank_hover">
+            <view class="single_rank_content">
+              <view>
+                <view>
+                  <view class="rank_title">{{item.title}}</view>
+                  <view class="rank_info">
+                    <view>
+                      <block wx:for="{{item.top3}}" wx:key="index" wx:for-item="cell">
+                        <image src="{{cell.images.large}}" style="z-index:{{5-index}};"/>
+                      </block>
+                    </view>
+                    <view class="rank_count" wx:if="{{item.count===maxCount}}">更多 <van-icon name="arrow" /></view>
+                    <view class="rank_count" wx:else>+{{item.count}}</view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+        
+    </view>
+  </view>
+  </scroll-view>
