@@ -82,10 +82,21 @@ function usMovice(params = null) {
  *  电影详情
  * @param  {string}  传入电影的id
  */
-function detail(params = null) {
+function detailMovice(params = null) {
   if (!params) return;
   const url = DouBanUrl + '/subject/' + params;
   return fetch(url, { apikey: DouBanAppKey });
+}
+
+
+function searchMovice(params = null) {
+  if (!params) return;
+  // const url = `https://movie.douban.com/j/subject_suggest?q=${params}`;
+
+  const url = `https://movie.douban.com/j/subject_suggest`;
+  return fetch(url, {
+    q: params
+  });
 }
 
 
@@ -110,7 +121,8 @@ export default {
   weeklyMovice,
   newMovice,
   usMovice,
-  detail
+  detailMovice,
+  searchMovice
 }
 
 

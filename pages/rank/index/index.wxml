@@ -1,4 +1,28 @@
 <!--index.wxml-->
 <view class="container">
-    
+  <view class="search_head">
+    <van-search
+      shape="round"
+      background="#999999"
+      placeholder="请输入搜索关键词"
+      bind:change="onChange"
+    />
+  </view>
+  <view class="search_content">
+    <empty id="empty"/>
+    <view>
+      <block wx:for="{{searchList}}" wx:key="index">
+        <view class="single_search" bindtap="singleTap" data-item="{{item}}">
+          <image class="search_img" src="{{item.img}}" mode="aspectFill"  />
+          <view class="search_right">
+            <view class="search_title">{{item.title}}</view>
+            <view class="search_sub_title" wx:if="{{item.sub_title}}">{{item.sub_title}}</view>
+            <view class="search_tag">
+              <view wx:if="{{item.year}}">{{item.year}}</view><view wx:if="{{item.type}}">{{item.type}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
 </view>

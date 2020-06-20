@@ -49,6 +49,6 @@ Component({
 		}
 	},
 	ready() {
-		this.showEmpty();
+		// this.showEmpty();
 	}
 })

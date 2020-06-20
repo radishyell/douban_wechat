@@ -28,6 +28,7 @@ create(store, {
 		this.fetchInfo();
 	},
 	async fetchInfo() {
+		this.selectComponent('#empty').showEmpty();
 		const location = await this.fetchLocation();
 		if (location) {
 			const result = await this.store.api.address(location.latitude, location.location);
