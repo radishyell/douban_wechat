@@ -20,15 +20,17 @@ create(store, {
 		}
 	},
 	async searchMovice(params) {
-		this.selectComponent('#empty').showEmpty();
+		if (!this.data.searchList.length) {
+			this.selectComponent('#empty').showLoading();
+		}
 		const result = await this.store.api.searchMovice(params);
 		if (result.isSuccess) {
 			this.setData({ searchList: result.data });
 		}
 		if (this.data.searchList.length) {
-			this.selectComponent('#empty').hiddenEmpty();
+			this.selectComponent('#empty').hidde();
 		} else {
-			this.selectComponent('#empty').showEmpty({}, false);
+			this.selectComponent('#empty').showEmpty();
 		}
 	},
 	singleTap(params) {
@@ -38,7 +40,7 @@ create(store, {
 	},
 	resetList() {
 		this.setData({ searchList: [] });
-		this.selectComponent('#empty').showEmpty({}, false);
+		this.selectComponent('#empty').showEmpty();
 	}
 });
 

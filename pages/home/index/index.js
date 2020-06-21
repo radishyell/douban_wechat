@@ -28,11 +28,11 @@ create(store, {
 		this.fetchInfo();
 	},
 	async fetchInfo() {
-		this.selectComponent('#empty').showEmpty();
+		this.selectComponent('#empty').showLoading();
 		const location = await this.fetchLocation();
 		if (location) {
-			const result = await this.store.api.address(location.latitude, location.location);
-			this.store.data.cityName = result || '上海';
+			const result = await this.store.api.address(location.latitude, location.longitude);
+			this.store.data.cityName = result.replace(/市/g,"") || null;
 		}
 		// 首页获取前三个
 		const params = {
@@ -48,7 +48,7 @@ create(store, {
 		// 排行榜
 		const rank = this.resetRankInfo(result);
 		this.setData({ rank });
-		this.selectComponent('#empty').hiddenEmpty();
+		this.selectComponent('#empty').hidde();
 	},
 	resetRankInfo(params) {
 		params.map((item) => {

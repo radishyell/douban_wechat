@@ -28,7 +28,7 @@ function address(latitude, longitude) {
  * @param  {object}  传参参照 defaultParams
  */
 function hotMovice(params = {}) {
-  Object.assign(params, { city: '上海' });
+  params.city = params.city || '广州';
   return resetParams('/in_theaters', params);
 }
 
@@ -91,12 +91,8 @@ function detailMovice(params = null) {
 
 function searchMovice(params = null) {
   if (!params) return;
-  // const url = `https://movie.douban.com/j/subject_suggest?q=${params}`;
-
   const url = `https://movie.douban.com/j/subject_suggest`;
-  return fetch(url, {
-    q: params
-  });
+  return fetch(url, { q: params });
 }
 
 

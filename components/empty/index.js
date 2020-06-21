@@ -8,11 +8,12 @@
 		},
 		btnText: '马上刷新'
 	}
-	this.selectComponent('#empty').showEmpty(config, false);
+	this.selectComponent('#empty').showLoading(config);
+	this.selectComponent('#empty').showEmpty(config);
 
 
 	空视图的隐藏
-	this.selectComponent('#empty').hiddenEmpty();
+	this.selectComponent('#empty').hidde();
 
 
  * 
@@ -31,7 +32,13 @@ Component({
 				this.data.config.callBack();
 			}
 		},
-		showEmpty(config = null, isLoading = true) {
+		showEmpty(config = null) {
+			this.show(config, false);
+		},
+		showLoading(config = null) {
+			this.show(config, true);
+		},
+		show(config = null, isLoading = true) {
 			const defaultConfig = {
 				title: isLoading ? '正在努力为您加载...':'暂无数据',
 				imagePath: isLoading ? './loading.gif' : './placehoder.png',
@@ -42,7 +49,7 @@ Component({
 				isShow: true
 			});
 		},
-		hiddenEmpty() {
+		hidde() {
 			if (this.data.isShow) {
 				this.setData({ isShow: false });
 			}
