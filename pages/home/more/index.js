@@ -36,6 +36,11 @@ create(store, {
 		}
 		const result = await this.store.api[this.data.path](params);
 		if (result.isSuccess) {
+			result.data.subjects.map((item) => {
+				if (item.subject) { Object.assign(item, item.subject) }
+				item.rate = item.rating.average / (item.rating.max / 5);
+				item.rateSize = 15;
+			});
 			this.setData({ moviceList: result.data.subjects || [] });
 			if (result.data.title) {
 				wx.setNavigationBarTitle({ title: result.data.title })

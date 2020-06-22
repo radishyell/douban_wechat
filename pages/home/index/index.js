@@ -12,6 +12,7 @@ create(store, {
 		windowHeight: 0,
 	},
 	onLoad() {
+		wx.setNavigationBarTitle({ title: '年度榜单' });
 		// 开发环境下开启debug模式
 		wx.setEnableDebug({ enableDebug: this.store.data.isDebug });
 		const windowHeight = wx.getSystemInfoSync().windowHeight;
@@ -45,6 +46,8 @@ create(store, {
 			return this.store.api[config[item]](params);
 		})
 		const result = await Promise.all(reqArray);
+		console.log(result);
+		
 		// 排行榜
 		const rank = this.resetRankInfo(result);
 		this.setData({ rank });

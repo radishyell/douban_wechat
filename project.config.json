@@ -10,8 +10,8 @@
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false,
 		"coverView": true,
+		"autoAudits": false,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
@@ -71,6 +71,13 @@
 					"name": "搜索",
 					"pathName": "pages/search/index/index",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "更多",
+					"pathName": "pages/home/more/index",
+					"query": "path=hotMovice",
 					"scene": null
 				}
 			]

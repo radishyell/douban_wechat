@@ -8,6 +8,91 @@
   height: 100%;
 }
 
-.content {
-  margin: 0 20rpx;
+
+.single_movice {
+  margin-top: 40rpx;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #999999;
+}
+.poster_head {
+  display: flex;
+}
+
+.poster_image{
+  height: 183rpx;
+  width: 130rpx;
+  border-radius: 10rpx;
+}
+
+.posert_info {
+  flex: 1;
+  margin-left: 30rpx;
+}
+
+.posert_info image {
+  width: 100%;
+  height: 100%;
+}
+
+.single_detail {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.single_left {
+  flex: 1;
+  overflow: hidden;
+}
+
+.movice_title {
+  display: flex;
+  align-items: center;
+}
+.play_icon {
+  color: #f46c78;
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.play_title {
+  font-size: 30rpx;
+  font-weight: bold;
+  max-width: 500rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.movice_rate {
+  margin: 10rpx 0rpx;
+}
+
+.like_content {
+  width: 120rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2rpx dashed #e3ab58;
+  color: #e3ab58;
+  font-size: 40rpx;
+}
+.like_title {
+  font-size: 20rpx;
+  margin-top: 10rpx;
+}
+
+.movice_tag {
+  font-size: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movice_tag view {
+  padding: 5rpx 10rpx;
+  border-radius: 5rpx;
+  background: #999999;
+  color: white;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
 }

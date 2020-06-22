@@ -1,6 +1,48 @@
 <scroll-view scroll-y class="home_srocll" style="height: {{windowHeight}}px;">
   <empty id="empty"/>
   <view class="content">
-  
+    <block wx:for="{{moviceList}}" wx:key="index">
+      <view class="single_movice">
+        <!-- 图片和海报 -->
+        <view class="poster_head">
+          <image class="poster_image" src="{{item.images.large}}" mode="aspectFill" />
+          <view class="posert_info">
+            <image src="{{item.directors[0].avatars.large}}" mode="aspectFill" />
+          </view>
+        </view>
+        <view class="single_detail">
+          <!-- 描述 -->
+          <view class="single_left">
+            <view class="movice_title">
+              <view class="play_icon" wx:if="{{item.has_video}}">
+                <van-icon name="play-circle-o" />
+              </view>
+              <view class="play_title">{{item.title}}</view>
+            </view>
+            <view class="movice_rate">
+              <van-rate readonly size="{{item.rateSize}}" value="{{item.rate}}" bind:change="onChange" />
+            </view>
+            <view class="movice_tag">
+              <view wx:if="{{item.year}}">{{item.year}}</view>
+              <block wx:for="{{item.genres}}" wx:key="index" wx:for-item="gItem">
+                <view wx:if="{{gItem}}">{{gItem}}</view>
+              </block>
+              <block wx:for="{{item.directors}}" wx:key="index" wx:for-item="gItem">
+                <view wx:if="{{gItem.name}}">{{gItem.name}}</view>
+              </block>
+              <block wx:for="{{item.casts}}" wx:key="index" wx:for-item="gItem">
+                <view wx:if="{{gItem.name}}">{{gItem.name}}</view>
+              </block>
+            </view>
+          </view>
+          <!-- 收藏 -->
+          <view class="like_content">
+            <van-icon name="like-o" />
+            <view class="like_title">想看</view>
+          </view>
+        </view>
+      </view>
+    </block>
+      
   </view>
   </scroll-view>
