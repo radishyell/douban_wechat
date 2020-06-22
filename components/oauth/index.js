@@ -50,9 +50,7 @@ create({
 			const code = await this.login();
 			if (code && params) {
 				console.log('发起请求，把用户数据存数据库');
-				
 				this.store.data.userInfo = params.userInfo;
-				
 				this.cancel();
 			} else {
 				console.log('code和用户信息未获取到');

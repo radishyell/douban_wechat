@@ -30,10 +30,12 @@ create(store, {
 			]
 		]
 	},
-	showSingle(params) {
+	onLoad() {
+		wx.setNavigationBarTitle({ title: '我的' });
+		console.log(this.store.data.userInfo);
 		
 	},
-	onReady() {
-		this.selectComponent('#oauth').isHaveUserInfo();
-	}
+	showSingle(params) {
+		// this.selectComponent('#oauth').isHaveUserInfo();
+	},
 });

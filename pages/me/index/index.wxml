@@ -6,14 +6,14 @@
       <view class="default_width name_outcontent">
         <image class="head_bg" mode="widthFix" src="/image/me/me_bg.png"></image>
         <view class="name_content default_font">
-          <image wx:if="{{userInfo.avatar_url}}" src="{{userInfo.avatar_url}}"></image>
+          <image wx:if="{{userInfo.avatarUrl}}" src="{{userInfo.avatarUrl}}"></image>
           <image wx:else src="/image/me/default_head.png"></image>
-          <view class="name_title">{{userInfo.nick_name}}</view>
+          <view class="name_title">{{userInfo.nickName}}</view>
         </view>
       </view>
     </view>
   </view>
-  <blcok wx:for="{{pageList}}" wx:key="index">
+  <!-- <blcok wx:for="{{pageList}}" wx:key="index">
     <view class="group">
       <block wx:for="{{item}}" wx:for-item="singleItem" wx:for-index="singleIndex" wx:key="singleIndex">
         <view>
@@ -26,5 +26,5 @@
     </view>
   </blcok>
 
-  <oath id="oauth_page"></oath>
+  <oath id="oauth_page"></oath> -->
 </view>

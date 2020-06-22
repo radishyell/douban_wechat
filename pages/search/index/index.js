@@ -9,6 +9,8 @@ create(store, {
 		searchList: [],
 	},
 	onLoad() {
+		wx.setNavigationBarTitle({ title: '搜索' });
+
 		this.resetList();
 	},
 	onChange(params) {
