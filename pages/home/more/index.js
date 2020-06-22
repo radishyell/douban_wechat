@@ -51,6 +51,16 @@ create(store, {
 		} else {
 			this.selectComponent('#empty').showEmpty();
 		}
+	},
+	moviceTap(params) {
+		try {
+			const index = params.currentTarget.dataset.item;
+			const item = this.data.moviceList[index];
+			if (!item || !item.id) return;
+			wx.navigateTo({ url: `/pages/home/detail/index?id=${item.id}` });
+		} catch (error) {
+			console.error(error)			;
+		}
 	}
 });
 

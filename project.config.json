@@ -79,6 +79,20 @@
 					"pathName": "pages/home/more/index",
 					"query": "path=hotMovice",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "详情页面",
+					"pathName": "pages/home/detail/index",
+					"query": "id=2364086",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/me/index/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

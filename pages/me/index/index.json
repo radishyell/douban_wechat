@@ -1,3 +1,6 @@
 {
-	"usingComponents": {}
+	"usingComponents": {
+
+		"oath": "/components/oauth/index"
+	}
 }
