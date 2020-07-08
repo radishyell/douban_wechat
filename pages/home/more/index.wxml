@@ -3,6 +3,12 @@
   <view class="content">
     <block wx:for="{{moviceList}}" wx:key="index">
       <view class="single_movice" bindtap="moviceTap" data-item="{{index}}">
+        <view class="single_bg">
+          <view class="single_bg_content">
+            <image src="{{item.images.large}}" mode="aspectFill" />
+            <view></view>
+          </view>
+        </view>
         <!-- 图片和海报 -->
         <view class="poster_head">
           <image class="poster_image" src="{{item.images.large}}" mode="aspectFill" />

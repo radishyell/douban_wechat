@@ -10,9 +10,10 @@ create(store, {
 		rank: [],
 		maxCount: 3,
 		windowHeight: 0,
+		userInfo: null,
 	},
 	onLoad() {
-		wx.setNavigationBarTitle({ title: '年度榜单' });
+		// wx.setNavigationBarTitle({ title: '年度榜单' });
 		// 开发环境下开启debug模式
 		wx.setEnableDebug({ enableDebug: this.store.data.isDebug });
 		const windowHeight = wx.getSystemInfoSync().windowHeight;

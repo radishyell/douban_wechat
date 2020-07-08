@@ -29,6 +29,11 @@
   height: 102rpx;
 }
 
+.container {
+  background: #d7d7d7;
+  display: block;
+}
+
 .group {
   background: white;
   margin-top: 30rpx;

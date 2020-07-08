@@ -43,7 +43,7 @@ create(store, {
 			});
 			this.setData({ moviceList: result.data.subjects || [] });
 			if (result.data.title) {
-				wx.setNavigationBarTitle({ title: result.data.title })
+				// wx.setNavigationBarTitle({ title: result.data.title })
 			}
 		}
 		if (this.data.moviceList.length) {

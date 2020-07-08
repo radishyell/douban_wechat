@@ -41,7 +41,8 @@ Component({
 		show(config = null, isLoading = true) {
 			const defaultConfig = {
 				title: isLoading ? '正在努力为您加载...':'暂无数据',
-				imagePath: isLoading ? './loading.gif' : './placehoder.png',
+				imagePath: isLoading ? './loading.png' : './placehoder.png',
+				isLoading,
 			};
 			if (config) { Object.assign(defaultConfig, config); }
 			this.setData({

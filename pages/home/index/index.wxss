@@ -51,11 +51,21 @@
   align-items: center;
   justify-self: start;
 }
-.rank_info image {
+
+.rank_image {
+  position: relative;
+  height: 183rpx;
+  width: 283rpx;
+}
+.rank_image image {
   height: 183rpx;
   width: 130rpx;
   border-radius: 10rpx;
-  margin-right: -40rpx;
+  display: block;
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+  
 }
 .rank_count {
   margin-left: 64rpx;

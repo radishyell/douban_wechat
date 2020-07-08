@@ -13,7 +13,7 @@
       </view>
     </view>
   </view>
-  <!-- <blcok wx:for="{{pageList}}" wx:key="index">
+  <blcok wx:for="{{pageList}}" wx:key="index">
     <view class="group">
       <block wx:for="{{item}}" wx:for-item="singleItem" wx:for-index="singleIndex" wx:key="singleIndex">
         <view>
@@ -25,6 +25,4 @@
       </block>
     </view>
   </blcok>
-
-  <oath id="oauth_page"></oath> -->
 </view>

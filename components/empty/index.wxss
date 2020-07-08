@@ -35,3 +35,13 @@
 	border-radius: 10rpx;
 	background: #c2dfee;
 }
+
+.loading_img {
+	width: 150rpx;
+	height: auto;
+	animation: loading_frame 1s steps(8) infinite;
+}
+@keyframes loading_frame {
+	from {transform: rotate(0deg);}
+		to {transform: rotate(360deg);}
+}

@@ -12,7 +12,39 @@
 .single_movice {
   margin-top: 40rpx;
   padding: 20rpx;
-  border-bottom: 2rpx solid #999999;
+  margin: 20rpx 10rpx;
+  border-radius: 30rpx;
+  position: relative;
+  overflow: hidden;
+}
+.single_bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.single_bg_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: orange;
+}
+.single_bg_content image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.single_bg_content view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
 }
 .poster_head {
   display: flex;
@@ -55,6 +87,7 @@
   margin-right: 20rpx;
 }
 .play_title {
+  color: white;
   font-size: 30rpx;
   font-weight: bold;
   max-width: 500rpx;

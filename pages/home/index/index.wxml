@@ -12,9 +12,9 @@
                 <view>
                   <view class="rank_title">{{item.title}}</view>
                   <view class="rank_info">
-                    <view>
+                    <view class="rank_image">
                       <block wx:for="{{item.top3}}" wx:key="index" wx:for-item="cell">
-                        <image src="{{cell.images.large}}" style="z-index:{{5-index}};"/>
+                        <image src="{{cell.images.large}}" style="left:{{index*70}}rpx;z-index:{{5-index}};"/>
                       </block>
                     </view>
                     <view class="rank_count" wx:if="{{item.count===maxCount}}">更多 <van-icon name="arrow" /></view>
