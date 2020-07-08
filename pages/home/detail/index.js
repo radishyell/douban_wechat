@@ -6,7 +6,7 @@ import regeneratorRuntime from '../../../utils/lib/runtime';
 
 create(store, {
 	data: {
-		moviceInfo: null,
+		bgImage: null,
 	},
 	onLoad(options) {
 		const windowHeight = wx.getSystemInfoSync().windowHeight;
@@ -24,10 +24,9 @@ create(store, {
 		this.selectComponent('#empty').showLoading();
 		const result = await this.store.api.detailMovice(this.data.moviceId);
 		if (result.isSuccess) {
-			
+			this.resetPageInfo(result.data);
 		}
-
-		if (this.data.moviceInfo) {
+		if (result.isSuccess && result.data) {
 			this.selectComponent('#empty').hidde();
 		} else {
 			const config = {
@@ -38,6 +37,18 @@ create(store, {
 			}
 			this.selectComponent('#empty').showEmpty(config);
 		}
+	},
+	resetPageInfo(params = null) {
+		if (!params) return;
+
+		const bgImage = params.images.large;
+
+
+
+
+		this.setData({
+			bgImage,
+		})
 	}
 	
 });
